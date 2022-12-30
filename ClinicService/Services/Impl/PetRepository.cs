@@ -31,7 +31,7 @@ namespace ClinicService.Services.Impl
             SQLiteConnection connection = new SQLiteConnection(connectionString);
             connection.Open();
             SQLiteCommand command = new SQLiteCommand(connection);
-            command.CommandText = "UPDATE Pets SET CLientId = @CLientId, Name = @Name, Birthday = @Birthday WHERE PetId = @PetId)";
+            command.CommandText = "UPDATE Pets SET CLientId = @CLientId, Name = @Name, Birthday = @Birthday WHERE PetId = @PetId";
             command.Parameters.AddWithValue("@PetId", item.PetId);
             command.Parameters.AddWithValue("@CLientId", item.ClientId);
             command.Parameters.AddWithValue("@Name", item.Name);
